@@ -32,3 +32,4 @@ Full Yahoo BOSS Api documentation
 Test
 ======
 
+[![Build Status](https://travis-ci.org/vodolaz095/yaboss.png)](https://travis-ci.org/vodolaz095/yaboss)
