@@ -12,13 +12,13 @@ Example
     var YaBoss = require('yaboss');
     var YaBossClient = new YaBoss('someCustomerKey', 'someCustomerSecret');
 
-    YaBossClient.search('web','yahoo',10, function(err,dataFound,response){...});
-    YaBossClient.searchWeb('yahoo',10, function(err,dataFound,response){...});
-    YaBossClient.searchLimitedWeb('yahoo',10, function(err,dataFound,response){...});
-    YaBossClient.searchImages('yahoo',10, function(err,dataFound,response){...});
-    YaBossClient.searchNews('yahoo',10, function(err,dataFound,response){...});
-    YaBossClient.searchBlogs('yahoo',10, function(err,dataFound,response){...});
-    YaBossClient.searchAds('yahoo',10, function(err,dataFound,response){...});
+    YaBossClient.search('web','yahoo', {count: 10}, function(err,dataFound,response){...});
+    YaBossClient.searchWeb('yahoo', {count: 10}, function(err,dataFound,response){...});
+    YaBossClient.searchLimitedWeb('yahoo', {count: 10}, function(err,dataFound,response){...});
+    YaBossClient.searchImages('yahoo', {count: 10, dimensions: 'medium'}, function(err,dataFound,response){...});
+    YaBossClient.searchNews('yahoo', {count: 10}, function(err,dataFound,response){...});
+    YaBossClient.searchBlogs('yahoo', {count: 10}, function(err,dataFound,response){...});
+    YaBossClient.searchAds('yahoo', {count: 10}, function(err,dataFound,response){...});
 
 
 ```
