@@ -28,7 +28,7 @@ internals.extend = function(a, b) {
 
 /**
  * @name yaBoss#search
- * @param {string} provider one of 'web','limitedweb','images','news'	,'blogs, 'ads'
+ * @param {string} provider one of 'web','limitedweb','images','news' ,'blogs, 'ads'
  * @param {string} query search query
  * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
  * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
@@ -51,26 +51,80 @@ YaBoss.prototype.search = function(provider, query, options, callback){
 };
 
 
+/**
+ * @name yaBoss#searchWeb
+ * @param {string} query search query
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
+ * @param {function} callback - function(err,dataFound, response){}
+ * @description
+ * Issue a call to web search api
+ */
 YaBoss.prototype.searchWeb = function(query, options, callback){
   this.search('web',query,options,callback);
 };
 
+/**
+ * @name yaBoss#searchLimitedWeb
+ * @param {string} query search query
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
+ * @param {function} callback - function(err,dataFound, response){}
+ * @description
+ * Issue a call to limit web search api
+ */
 YaBoss.prototype.searchLimitedWeb = function(query, options, callback){
   this.search('limitedweb',query,options,callback);
 };
 
+/**
+ * @name yaBoss#searchImages
+ * @param {string} query search query
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
+ * @param {function} callback - function(err,dataFound, response){}
+ * @description
+ * Issue a call to images search api
+ */
 YaBoss.prototype.searchImages = function(query, options, callback){
   this.search('images',query,options,callback);
 };
 
+/**
+ * @name yaBoss#searchImages
+ * @param {string} query search query
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
+ * @param {function} callback - function(err,dataFound, response){}
+ * @description
+ * Issue a call to news search api
+ */
 YaBoss.prototype.searchNews = function(query, options, callback){
   this.search('news',query,options,callback);
 };
 
+/**
+ * @name yaBoss#searchBlogs
+ * @param {string} query search query
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
+ * @param {function} callback - function(err,dataFound, response){}
+ * @description
+ * Issue a call to search blogs api
+ */
 YaBoss.prototype.searchBlogs = function(query, options, callback){
   this.search('blogs',query,options,callback);
 };
 
+/**
+ * @name yaBoss#searchAds
+ * @param {string} query search query
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
+ * @param {function} callback - function(err,dataFound, response){}
+ * @description
+ * Issue a call to search ads api
+ */
 YaBoss.prototype.searchAds = function(query, options, callback){
   this.search('ads',query,options,callback);
 };
@@ -79,7 +133,8 @@ YaBoss.prototype.searchAds = function(query, options, callback){
 /**
  * @name yaBoss#getGeoSearch
  * @param {string} query search query
- * @param {int} count number of responses
+ * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
+ * for the complete list please refer to Boss's documentation: http://developer.yahoo.com/boss/search/boss_api_guide/v2_univer_api_args.html
  * @param {function} callback - function(err,dataFound, response){}
  * @description
  * Issue a call to web search api

@@ -19,6 +19,7 @@ Example
     YaBossClient.searchNews('yahoo', {count: 10}, function(err,dataFound,response){...});
     YaBossClient.searchBlogs('yahoo', {count: 10}, function(err,dataFound,response){...});
     YaBossClient.searchAds('yahoo', {count: 10}, function(err,dataFound,response){...});
+    YaBossClient.getGeoSearch('yahoo', {count: 10}, function(err,dataFound,response){...});
 
 
 ```
