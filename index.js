@@ -5,8 +5,8 @@ var internals = {};
 
 /**
  * @name Yaboss
- * @param {string} consumerKey
- * @param {string} consumerSecret
+ * @param {String} consumerKey
+ * @param {String} consumerSecret
  * @returns {YaBoss}
  * @constructor
  */
@@ -27,7 +27,7 @@ internals.extend = function(a, b) {
 };
 
 /**
- * @name yaBoss.search
+ * @name yaBoss#search
  * @param {string} provider one of 'web','limitedweb','images','news'	,'blogs, 'ads'
  * @param {string} query search query
  * @param {object} options - additional options. Some of the available options are: 'count', 'filter', 'sites',
@@ -77,7 +77,7 @@ YaBoss.prototype.searchAds = function(query, options, callback){
 
 
 /**
- * @name yaBoss.getGeoSearch
+ * @name yaBoss#getGeoSearch
  * @param {string} query search query
  * @param {int} count number of responses
  * @param {function} callback - function(err,dataFound, response){}
