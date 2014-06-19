@@ -148,7 +148,7 @@ YaBoss.prototype.getGeoSearch = function(query, options, callback){
   var geoSearchUrl = 'https://yboss.yahooapis.com/geo/placefinder',
     finalUrl = geoSearchUrl +'?'+ qs.stringify(internals.extend({q: query}, options));
 
-  var oa = new OAuth.OAuth(webSearchUrl, finalUrl , this.consumerKey, this.consumerSecret, "1.0", null, "HMAC-SHA1");
+  var oa = new OAuth.OAuth(geoSearchUrl, finalUrl , this.consumerKey, this.consumerSecret, "1.0", null, "HMAC-SHA1");
   oa.setClientOptions({ requestTokenHttpMethod: 'GET' });
   oa.getProtectedResource(finalUrl, "GET", '','', callback);
 };
